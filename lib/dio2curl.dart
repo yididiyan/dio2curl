@@ -7,7 +7,7 @@ String dio2curl(RequestOptions requestOption) {
 
 
   // Add PATH + REQUEST_METHOD 
-  curl += 'curl --request ${requestOption.method} \'${requestOption.path}\'';
+  curl += 'curl --request ${requestOption.method} \'${requestOption.baseUrl}${requestOption.path}\'';
   
   // Include headers 
   for(var key in requestOption.headers.keys) {
